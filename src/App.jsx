@@ -1,12 +1,25 @@
-import { useState } from "react";
 import "./App.css";
-
+import {
+  SignedIn,
+  SignedOut,
+  SignInButton,
+  UserButton,
+} from "@clerk/clerk-react";
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
+      <header>
+        <SignedOut>
+          <SignInButton />
+          <h1 className="text-3xl font-bold underline">
+            Hello User you are not signed in!
+          </h1>
+        </SignedOut>
+        <SignedIn>
+          <UserButton />
+          <h1 className="text-3xl font-bold">Hello User you are signed in!</h1>
+        </SignedIn>
+      </header>
     </>
   );
 }
