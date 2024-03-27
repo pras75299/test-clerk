@@ -12,7 +12,7 @@ function App() {
       <header>
         <SignedOut>
           <SignInButton />
-          <h1 className="text-3xl font-bold underline">
+          <h1 className="text-3xl font-bold mt-4">
             Hello User you are not signed in!
           </h1>
         </SignedOut>
