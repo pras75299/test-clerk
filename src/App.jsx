@@ -4,6 +4,7 @@ import {
   SignedOut,
   SignInButton,
   UserButton,
+  UserProfile,
 } from "@clerk/clerk-react";
 function App() {
   return (
@@ -17,7 +18,9 @@ function App() {
         </SignedOut>
         <SignedIn>
           <UserButton />
-          <h1 className="text-3xl font-bold">Hello User you are signed in!</h1>
+          <div className="mt-4">
+            <UserProfile />
+          </div>
         </SignedIn>
       </header>
     </>
